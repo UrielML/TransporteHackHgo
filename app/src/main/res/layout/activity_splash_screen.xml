@@ -17,7 +17,7 @@
         android:layout_weight="0.34"
         android:background="#FFFFFE"
         android:padding="20dp"
-        app:srcCompat="@drawable/p" />
+        app:srcCompat="@mipmap/redvecinallogo" />
 
     <ProgressBar
         android:id="@+id/progressBar"
