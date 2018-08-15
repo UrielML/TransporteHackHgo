@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".alerta">
+
+    <EditText
+        android:id="@+id/editText27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Alerta"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="40dp" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Denuncia"
+        tools:layout_editor_absoluteX="146dp"
+        tools:layout_editor_absoluteY="189dp" />
+
+    <EditText
+        android:id="@+id/editText28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/inci"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="274dp" />
+</android.support.constraint.ConstraintLayout>

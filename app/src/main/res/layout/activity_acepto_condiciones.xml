@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".acepto_condiciones">
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="249dp"
+        android:layout_height="64dp"
+        android:text="acepto terminos y condiciones"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="63dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cancelar"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="217dp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="enviar formulario"
+        tools:layout_editor_absoluteX="182dp"
+        tools:layout_editor_absoluteY="217dp" />
+</android.support.constraint.ConstraintLayout>
