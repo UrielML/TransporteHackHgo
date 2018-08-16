@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity" >
 
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -16,6 +15,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
         android:fontFamily="monospace"
         android:text="Usuario"
         android:textAppearance="@style/TextAppearance.AppCompat"

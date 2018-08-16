@@ -132,9 +132,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                 getSystemService(Context.CONNECTIVITY_SERVICE);
 
         if (cm.getActiveNetworkInfo() != null && cm.getActiveNetworkInfo().isConnectedOrConnecting()) {
-            String NAMESPACE = "urn:WSAlarma";
-            String METHOD = "WSAlarma";
-            final String URL = "http://estadia.factury.mx/WS22/AutenticaUsuario.php";
+            String NAMESPACE = "urn:WSAutntica";
+            String METHOD = "Autntica";
+            final String URL = "https://bitgeekenvironments.net:443/redVigilante/WebServices/AutenticaUsuario.php?wsdl";
             final String SOAP_ACTION = ""; /*NAMESPACE + "/" + METHOD*/
 
             SoapObject req = new SoapObject(NAMESPACE, METHOD);
@@ -176,6 +176,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                         return -2;
                     else if(response.equals("-3"))
                         return -3;
+                    else if(response.equals("-8"))
+                        return -8;
                     else
                         return 1;
 
@@ -304,8 +306,11 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                     startService(intentService);
                 }
 
-                Toast.makeText(MainActivity.this, "¡Misión cumplida!", Toast.LENGTH_SHORT).show();
+
             }
+            else if (response == -8)
+                Toast.makeText(MainActivity.this, "Usuario o Contraseña erronea",
+                        Toast.LENGTH_SHORT).show();
             else if (response == -5)
                 Toast.makeText(MainActivity.this, "No pudimos conectarnos a Internet :(",
                         Toast.LENGTH_SHORT).show();
@@ -339,13 +344,14 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
             JSONArray array = new JSONArray(response);
             for (int i = 0; i < array.length(); i++){
                 JSONObject obj = array.getJSONObject(i);
-                if(!obj.getString("Id_Colonia").equals("")){
                     Intent intent = new Intent(this, Inicio.class);
-                    intent.putExtra("id_colonia", ""+obj.getString("Id_Colonia"));
-                    intent.putExtra("Id_Usuario", ""+obj.getString("Id_Usuario"));
+                    intent.putExtra("Id_Usuarios", ""+obj.getString("Id_Usuarios"));
+                    intent.putExtra("Id_Personas", ""+obj.getString("Id_Personas"));
+                    intent.putExtra("Id_DGrupo", ""+obj.getString("Id_DGrupo"));
+                    intent.putExtra("Id_TUsuarios", ""+obj.getString("Id_TUsuarios"));
+                    intent.putExtra("Id_Grupo", ""+obj.getString("Id_Grupo"));
                     startActivity(intent);
                     //Toast.makeText(this,"logrado", Toast.LENGTH_SHORT).show();
-                }
             }
 
         } catch (JSONException e) {

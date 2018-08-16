@@ -62,8 +62,8 @@
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
                                       <entry key="iconShape" value="NONE" />
-                                      <entry key="imageAsset" value="C:\Users\URY19\Desktop\Logo_RedesVecinales.png" />
-                                      <entry key="outputName" value="ic_rvecinal" />
+                                      <entry key="imageAsset" value="C:\Users\URY19\Desktop\redvecinallogo.png" />
+                                      <entry key="outputName" value="revecinalico" />
                                     </map>
                                   </option>
                                 </PersistentState>
